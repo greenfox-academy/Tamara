@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+
+body > div {
+    width: 350px;
+
+
+}
+
+body>div>div {
+    border:16px solid rgb(66, 133, 244);
+    margin: 10px;
+    background:rgb(230, 118, 118);
+}
+body>div>div>div {
+    height: 130px;
+    text-align: center;
+    font-size: 36px;
+    padding-top: 45px;
+    
+}
+body>div>div:nth-child(2) {
+    background:rgb(169, 230, 230);
+}
