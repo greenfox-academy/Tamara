@@ -9,37 +9,43 @@ div {
     width: 625px;
     height: 780px;
     background-color: rgb(18, 119, 49);
-    margin: 5px auto;
+    margin: 0px auto;
+    padding-top: 10px;
 }
 .header {
     height: 42px;
     border: 13px solid rgb(255, 18, 0);
     background-color: rgb(255, 228, 46);
-    padding-bottom: 10px;
+    padding-top: 10px;
     text-align: center;
-    margin-top: 13px;
 }
 .panel1 {
-    height: 42px;
+    width: 310px;
+    height: 435px;
     border: 13px solid rgb(255, 18, 0);
     background-color: rgb(255, 228, 46);
-    padding-bottom: 10px;
-    text-align: center;
-    margin-top: 13px;
+    text-align: left;
+    display: inline-block;   
+    margin-top: 10px;
+    padding-right: 0px;
 }
 .panel2 {
-    height: 42px;
+    width: 310px;    
+    height: 435px;
     border: 13px solid rgb(255, 18, 0);
     background-color: rgb(255, 228, 46);
-    padding-bottom: 10px;
-    text-align: center;
-    margin-top: 13px;
+    text-align: right;
+    display: inline-block;
+    margin-top: 10px;  
+    padding-left: 0px;    
 }
 .closer {
-    height: 42px;
+    height: 183px;
     border: 13px solid rgb(255, 18, 0);
     background-color: rgb(255, 228, 46);
     padding-bottom: 10px;
-    text-align: center;
-    margin-top: 13px;
+    text-align: bottom;
+    margin-top: 16px;
+    padding-bottom: 60px;
+    margin-bottom: 13px;
 }
