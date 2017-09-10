@@ -8,17 +8,18 @@
     <link href="styles.css" rel="stylesheet">
 </head>
 <body>
-    <div>
-        <div class="header">
-             <h1>Profil</h1> 
-        </div>
-        <div class="panel1">
-            <form>
+    <form>
+        <div>
+            <div class="header">
+                <header>Profil</header> 
+            </div>
+            <div class="panel1">
+           
                 <h1>Személyes adatok</h1>
                 <p>Név</p>
                 <input type="text" id="name" name="user_name">
                 <p>Születési éved</p>                
-                <input type="date" id="date" name="date">
+                <input type="text" id="date" name="date" placeholder="pl.1984">                             
                 <p>Nemed</p>                                
                 <input type="radio" id="gender" name="gender">
                 <label for="Nő">Nő</label>                
@@ -46,32 +47,37 @@
                 <input type="checkbox" id="brand" name="brand">
                 <label for= "Yahoo">Yahoo</label>
                 <p>Többet is választhatsz!</p> 
-        </div>    
-        <div class="panel2">
-            <h1>Kapcsolat</h1>
-            <p>Telefonszám</p>
-            <input type="number" id="number" name="number">
-            <p>E-mail cím</p>
-            <input type="mail" id="mail" name="mail">            
-            <p>Facebook profilod</p>
-            <input type="url" id="facebook" name="facebook">            
-            <p>Twitter profilod</p>
-            <input type="url" id="twitter" name="twitter">            
-            <p>Milyen házban laksz?</p>
-            <selecttype="text" id="house" name="house"></select>
-            
+            </div>    
+            <div class="panel2">
+                <h1>Kapcsolat</h1>
+                <p>Telefonszám</p>
+                <input type="number" id="number" name="number" placeholder="+36 -- --- ----">
+                <p>E-mail cím</p>
+                <input type="email" id="mail" name="mail" placeholder="nev@domain.hu">            
+                <p>Facebook profilod</p>
+                <input type="url" id="facebook" name="facebook" placeholder="http://facebook.com/">            
+                <p>Twitter profilod</p>
+                <input type="url" id="twitter" name="twitter" placeholder="http://twitter.com/">            
+                <p>Milyen házban laksz?</p>
+                <select name="house">
+                    <option value="(Válassz típust!)">(Válassz típust!)</option>
+                    <option value="sorház">sorház</option>
+                    <option value="családi ház">családi ház</option>
+                    <option value="panel">panel</option>
+                </select>
+            </div>
+            <div class="closer">
+                <h2>Bemutatkozás</h2>
+                <textarea type="text" name:"bemutatkozas" placeholder="Írj magadról pár mondatot!">
+                </textarea>  
+                <p>CV feltöltése</p>
+                <input type="submit" id="Uploading of the file" name="File" value="file kiválasztása"> 
+                <input type="checkbox" id="Condition" name="Condition">
+                <label for="Elfogadom a felhasználási feltételeket">Elfogadom a felhasználási feltételeket</label>
+                <input type="submit" id="Save" name="Save" value="mentés"> 
+                <input type="submit" id="Delete form" name="Delete form" value="űrlap törlése">                 
+            </div>    
         </div>
-        <div class="closer">
-            <h1>Bemutatkozás</h1>
-            <textarea type="text" name:"bemutatkozas">
-            </textarea>  
-            <p>CV feltöltése</p>
-            <input type="button" id="File feltöltése" name="File"> 
-            <p>Elfogadom a felhasználsi feltételeket</p>
-            <input type="checkbox" id="Condition" name="Condition"> 
-
-        </div>    
-        </form>
-    </div>
+    </form>
 </body>
 </html>

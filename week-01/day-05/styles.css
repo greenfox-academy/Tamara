@@ -20,38 +20,59 @@ div {
    /*  border: 10px solid rgb(255, 17, 0); */
     background-color: lightgray;
     text-align: left;
+    color: rgb(93, 86, 111);
+    font-size: 22px;
+    margin-left: 40px;
 }
 h1 {  
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
-    color: darkgrey;
-    /* display: inline; */
+    color: white;
+    text-align: left;
+    background-color: rgb(147, 140, 151);
+    border: 0;
+    padding: 5px 10px 5px 20px;
+    margin-bottom: 10px;
 }
 
 .panel1 {
-    width: 310px;
-    height: 435px;
-  /*   border: 13px solid rgb(255, 18, 0); */
+    width: 40%;
+    height: 350px;
+    border: 1px solid rgb(255, 18, 0);
     background-color:lightgray;
-    text-align: left;
     display: inline-block;   
     float: left;
     clear: both;
     margin-top: 10px;
-    padding-right: 0px;
+    margin-left: 40px;
+    
 }
 .panel2 {
-    width: 310px;    
-    height: 435px;
-   /*  border: 13px solid rgb(255, 18, 0); */
+    width: 40%;    
+    height: 350px;
+    border: 1px solid rgb(255, 18, 0);
     background-color: lightgray;
     text-align: left;
     display: inline-block;
-    margin-top: 10px;  
-    padding-left: 0px;    
+    margin-top: 10px;
+    margin-left: 25px;      
 }
-.panel1>div {
-
+input[type="text"], input[type="email"],  
+input[type="url"],  input[type="number"], 
+select[name="house"] {
+    width: 100%;
+    padding: 5px 10px 5px 20px;
+}
+input[id="date"]{
+    width:30%;
+}
+p{
+    margin: 5px 0px 5px 0px;
+    color: rgb(93, 86, 111);
+    font-weight: bold;
+}
+input[placeholder=""]{
+    text-align: left;
 }
 .closer {
     height: 210px;
