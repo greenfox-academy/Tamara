@@ -11,4 +11,9 @@
 # Print the integer part of 22 divided by 13
 
 # Print the reminder of 22 divided by 13
-
+print(13 + 22)
+print(22 - 13)
+print(13 * 22)
+print(22 / 13)
+print(22 // 13)
+print(22 % 13)
