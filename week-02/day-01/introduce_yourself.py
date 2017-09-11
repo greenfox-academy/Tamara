@@ -8,3 +8,7 @@
 #  John Doe
 #  31
 #  1.87
+
+print ('Tamara Szigeti')
+print('31')
+print('1,66 m')
