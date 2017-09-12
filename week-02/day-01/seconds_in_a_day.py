@@ -10,8 +10,8 @@ day_seconds = 00
 
 remaining_hours = day_hours - current_hours
 remaining_minutes = day_minutes - current_minutes
-remaining_seconds = day_seconds - current_seconds
-remaining = remaining_hours*60*60 + remaining_minutes*60
-remaining_total = remaining + remaining_seconds
-remaining_total_var = int(remaining_total)
-print( remaining_total_var ) 
+print(remaining_minutes)
+#remaining_seconds = day_seconds - current_seconds
+#remaining = remaining_hours * 60 * 60 + remaining_minutes * 60
+#remaining_total = remaining + remaining_seconds
+#print( remaining_total ) 
