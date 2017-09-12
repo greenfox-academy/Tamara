@@ -5,8 +5,8 @@
 
 am = 'kuty'
 def appendA(string):
-    string=['a']
-    string.append(am)
+    string = am
+    string += "a"
     return string
 
 print(appendA(am))
