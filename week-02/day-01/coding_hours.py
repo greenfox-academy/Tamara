@@ -6,4 +6,11 @@
 #
 # Print the percentage of the coding hours in the semester if the average
 # work hours weekly is 52
-
+a = 6
+b = 52
+c = 17
+d = (a* c *5)
+print("coding_time: " + str(d))
+e = c * b
+f = float(d) / e
+print("whole_working_hours: " + str(f * 100) + " %" )
