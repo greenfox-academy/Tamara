@@ -1,17 +1,13 @@
-# Add "My todo:" to the beginning of the todoText
-# Add " - Download games" to the end of the todoText
-# Add " - Diablo" to the end of the todoText but with indention
+# When saving this quote a disk error has occured. Please fix it.
+# Add "always takes longer than" between the words "It" and "you"
 
-# Expected outpt:
+quote = "Hofstadter's Law: It you expect, even when you take into account Hofstadter's Law."
+solution = quote.split(" ")
+print(solution.index("It"))
+solution.insert(3, "always takes longer than")
+#solution [:3] += ["always takes longer than"] 2.solution
+quote = " ".join(solution)
 
-# My todo:
-#  - Buy milk
-#  - Download games
-#      - Diablo
-
-todoText = " - Buy milk\n"
-todoText += " - Download games\n"
-todoText = todoText[:0] + "My todo: \n" + todoText[0:]
-#todoText += " "
-todoText += "     " + " - Diablo\n"
-print(todoText)
+#solution.append("always takes longer than")
+#
+print(quote)
