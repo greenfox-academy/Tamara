@@ -13,3 +13,11 @@
 # 8 * 15 = 120
 # 9 * 15 = 135
 # 10 * 15 = 150
+
+i = 10
+def number(n):
+    for x in range(1, 11):
+        print(str(x) + ' * ' + str(i) + ' = ' + str(x*i))
+        
+        
+number(3)
