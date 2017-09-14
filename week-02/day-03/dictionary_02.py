@@ -20,10 +20,10 @@ def name_counter(students):
     return names
 print(name_counter(students))
 
-average_candies = 0
 def average():
     avg = 0
     for i in range(len(students)):
         avg += students[i]['candies']/len(students)
-    print(avg)
-#print(average())
+    return(avg)
+
+print(average())

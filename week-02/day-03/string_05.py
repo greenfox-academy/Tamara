@@ -12,6 +12,5 @@
 todoText = " - Buy milk\n"
 todoText += " - Download games\n"
 todoText = todoText[:0] + "My todo: \n" + todoText[0:]
-#todoText += " "
 todoText += "     " + " - Diablo\n"
 print(todoText)
