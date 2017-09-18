@@ -10,12 +10,12 @@
 import os.path
 
 def write_multiple_lines(path, word, number):
-    multiple_line = open(os.path.join("multiple_line.txt"), "w")
+    multiple_line = open(path, "w")
     try:
-        for word in range(number):
+        for i in range(number):
             multiple_line.write(word + "\n")
     except:
         return 0
-
-
-write_multiple_lines("D:\greenfox\first-task\Tamara\week-03\day-01", "apple", 5)
+    
+    multiple_line.close()
+write_multiple_lines("D:\greenfox\\first-task\Tamara\week-03\day-01\multiple_line.txt", "apple", 5)
