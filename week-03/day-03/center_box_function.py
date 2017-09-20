@@ -10,4 +10,10 @@ canvas.pack()
 # and draws a square of that size to the center of the canvas.
 # draw 3 squares with that function.
 
+def center_square(size):
+    canvas.create_rectangle(150 - size, 150 - size, 150 + size, 150 + size, fill='red')
+
+center_square(100)
+center_square(70)
+center_square(40)
 root.mainloop()
