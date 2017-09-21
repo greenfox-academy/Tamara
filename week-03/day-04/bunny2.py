@@ -2,3 +2,14 @@
 # (1, 3, ..) have the normal 2 ears. The even bunnies (2, 4, ..) we'll say
 # have 3 ears, because they each have a raised foot. Recursively return the
 # number of "ears" in the bunny line 1, 2, ... n (without loops or multiplication).
+
+def sum_bunnies_ears(n):
+    if n == 0:
+        return 0
+    elif n % 2 == 1:
+        return 2 + sum_bunnies_ears(n-1)
+    else:
+        return 3 + sum_bunnies_ears(n-1)
+
+
+print(sum_bunnies_ears(6))
