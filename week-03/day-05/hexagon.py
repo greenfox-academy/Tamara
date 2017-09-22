@@ -18,7 +18,7 @@ def draw_hexagon(x, y, size):
     
 def draw_fractal(x, y, size):
     height = math.sqrt(3)/2 * size
-    if size < 70:
+    if size < 1:
         return
     else:
         draw_hexagon(x, y, size)
