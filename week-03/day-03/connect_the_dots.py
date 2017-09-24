@@ -12,4 +12,17 @@ canvas.pack()
 # connect these: [[50, 100], [70, 70], [80, 90], [90, 90], [100, 70],
 # [120, 100], [85, 130], [50, 100]]
 
+
+lines1 = [[10, 10], [290,  10], [290, 290], [10, 290]]
+lines2 = [[50, 100], [70, 70], [80, 90], [90, 90], [100, 70], [120, 100], [85, 130], [50, 100]]
+
+def connecting_dots(lines):
+    for point1 in lines:
+        for point2 in lines:
+            canvas.create_line(point1[0], point1[1], point2[0], point2[1], fill='green')
+
+
+connecting_dots(lines1)
+connecting_dots(lines2)
+
 root.mainloop()
