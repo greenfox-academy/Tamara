@@ -1,15 +1,4 @@
-class Person(object):
-    
-    def __init__(self, name="Jane Doe", age=30, gender="female"):
-        self.name = name
-        self.age = age
-        self.gender = gender
-    
-    def introduce(self):
-        print("Hi, I'm {} , a {} year old {}.".format(self.name, self.age, self.gender))
-
-    def get_goal(self):
-        print("My goal is: Live for the moment!")
+from person import Person
 
 
 class Student(Person):
@@ -21,9 +10,11 @@ class Student(Person):
     
     def get_goal(self):
         print("Be a junior software developer.")
+
     def introduce(self):
-        print("Hi, I'm {}, a {} year old {} from {} \
-        who skipped {} days from the course already.".format(self.name, self.age, self.gender, self.previous_organization, self.skipped_days))
+        print("Hi, I'm {}, a {} year old {} from {} who skipped {} days from the course already."\
+        .format(self.name, self.age, self.gender, self.previous_organization, self.skipped_days))
+    
     def skip_days(self, number_of_days): 
         self.skipped_days += number_of_days
 
@@ -35,6 +26,7 @@ class Mentor(Person):
 
     def get_goal(self):
         print("Educate brilliant junior software developers.")
+    
     def introduce(self):
         print( "Hi, I'm {}, a {} year old {} {} mentor.".format(self.name, self.age, self.gender, self.level))
 
@@ -46,8 +38,11 @@ class Sponsor(Person):
 
     def get_goal(self):
         print("Hire brilliant junior software developers.")
+    
     def introduce(self):
-        print( "Hi, I'm {}, a {} year old {} who represents {} and hired {} students so far.".format(self.name, self.age, self.gender, self.company, self.hired_students))
+        print( "Hi, I'm {}, a {} year old {} who represents {} and hired {} students so far."\
+        .format(self.name, self.age, self.gender, self.company, self.hired_students))
+    
     def hire(self):
         self.hired_students += 1
 
@@ -64,8 +59,8 @@ class PallidaClass(object):
         self.mentors.append(mentor)
     
     def info(self): 
-        print("Pallida className class has {} \
-        students and {} mentors.".format(len(self.students), len(self.mentors)))
+        print("Pallida {} class has {} students and {} mentors."\
+        .format(self.class_of_name, len(self.students), len(self.mentors)))
 
 
 #test
