@@ -1,6 +1,6 @@
 class Person(object):
     
-    def __init__(self, name="Jane Doe", age="30", gender="female"):
+    def __init__(self, name="Jane Doe", age=30, gender="female"):
         self.name = name
         self.age = age
         self.gender = gender
@@ -13,22 +13,24 @@ class Person(object):
 
 
 class Student(Person):
-    def __init__(self, name="Jane Doe", age="30", gender="female", previous_organization="The School of Life"):
-        super().__init()
+    def __init__(self, name="Jane Doe", age=30, gender="female", previous_organization="The School of Life"):
+        super().__init__(name, age, gender)
         self.previous_organization = previous_organization
         self.skipped_days = 0
+        
     
     def get_goal(self):
         print("Be a junior software developer.")
     def introduce(self):
-        print("Hi, I'm {}, a {} year old {} from {} who skipped {} days from the course already.".format(set.name, set.age, set.gender, set.previous_organization))
+        print("Hi, I'm {}, a {} year old {} from {} \
+        who skipped {} days from the course already.".format(self.name, self.age, self.gender, self.previous_organization, self.skipped_days))
     def skip_days(self, number_of_days): 
-        skipped_days += number_of_days
+        self.skipped_days += number_of_days
 
 
 class Mentor(Person):
     def __init__(self, name="Jane Doe", age="30", gender="female", level="intermadiate"):
-        super().__init()
+        super().__init__()
         self.level = level
 
     def get_goal(self):
@@ -37,8 +39,8 @@ class Mentor(Person):
         print( "Hi, I'm {}, a {} year old {} {} mentor.".format(self.name, self.age, self.gender, self.level))
 
 class Sponsor(Person):
-    def __init__(self, name="Jane Doe", age="30", gender="female", company="Google", hired_students="0"):
-        super().__init()
+    def __init__(self, name="Jane Doe", age="30", gender="female", company="Google", hired_students=0):
+        super().__init__()
         self.company = company
         self.hired_students = hired_students
 
@@ -51,16 +53,19 @@ class Sponsor(Person):
 
 class PallidaClass(object):
     def __init__(self, class_of_name):
-        self.class_name = class_name
-        self.students = ()
-        self.mentors = ()
+        self.class_of_name = class_of_name
+        self.students = []
+        self.mentors = []
 
-    def add_student(self): 
-        students.add(Student)
-    def add_mentor(self): 
-        mentors.add(Mentor)
-    def info(): 
-        print("Pallida className class has len(students) students and len(mentors) mentors.")
+    def add_student(self, student): 
+        self.students.append(student)
+
+    def add_mentor(self, mentor): 
+        self.mentors.append(mentor)
+    
+    def info(self): 
+        print("Pallida className class has {} \
+        students and {} mentors.".format(len(self.students), len(self.mentors)))
 
 
 #test
@@ -93,7 +98,7 @@ for member in people:
     member.introduce()
     member.get_goal()
 
-badass = LagopusClass('BADA55')
+badass = PallidaClass('BADA55')
 badass.add_student(student);
 badass.add_student(john);
 badass.add_mentor(mentor);
