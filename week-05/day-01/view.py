@@ -24,36 +24,43 @@ class DrawMap():
                     canvas.create_image(x*72, y*72, anchor = NW, image = self.image2)
                 
 
-class DrawEntity:
+class Entity(object):
     def __init__(self):
         self.hero = PhotoImage(file = 'hero-down.Png')
+        self.hero_right = PhotoImage(file = 'hero-right.Png')
+        self.hero_left = PhotoImage(file = 'hero-left.Png')
+        self.hero_up = PhotoImage(file = 'hero-up.Png')        
         self.drawing_entity()
 
     def drawing_entity(self):
-        self.entity_img = canvas.create_image(0, 0, anchor = NW, image = self.hero)
-
-class Entity(object):
-    def __init__(self):
-        pass
+        self.hero_img = canvas.create_image(0, 0, anchor = NW, image = self.hero)
 
     def move(self, dx, dy):
-        canvas.move(hero.entity_img, dx, dy )
+        canvas.move(hero.hero_img, dx, dy )
 
-entities = Entity()
-def moving(e):
-    if (e.keysym == 'Up'):
-        entities.move(0,-72)
-    elif (e.keysym == 'Down'):
-        entities.move(0,72)
-    elif (e.keysym == 'Right'):
-        entities.move(72,0)            
-    elif (e.keysym == 'Left'):
-        entities.move(-72,0)
+    def update_costume(self, costume):
+        self.costume = costume
+        canvas.itemconfigure(self.hero_img, image=self.costume)
+    
+    def moving(self, e):
+        if (e.keysym == 'Up'):
+            self.move(0,-72)
+            self.update_costume(self.hero_up)
+        elif (e.keysym == 'Down'):
+            self.move(0,72)
+            self.update_costume(self.hero)            
+        elif (e.keysym == 'Right'):
+            self.move(72,0)            
+            self.update_costume(self.hero_right)            
+        elif (e.keysym == 'Left'):
+            self.move(-72,0)
+            self.update_costume(self.hero_left)                
+
 
 canvas.pack()
 map_draw = DrawMap()
-hero = DrawEntity()
-root.bind("<KeyPress>", moving)
+hero = Entity()
+root.bind("<KeyPress>", hero.moving)
 canvas.focus_set()
 
 root.mainloop()
