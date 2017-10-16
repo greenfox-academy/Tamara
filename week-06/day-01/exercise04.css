@@ -1,0 +1,40 @@
+
+#layout{
+    width: 960px;
+    height: 100%;
+    background: grey;
+}
+.navigation{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+}
+#header{
+    height: 60px;
+    width: 100%;
+    background:  rgb(176, 42, 255);
+}
+
+
+.item{
+    height: 30px;
+    width: 60px;
+    min-width: 10px;
+    background: rgb(42, 234, 255);
+    margin: 0px 8px 0 10px;
+}
+
+#main{
+    width: 100px;
+    height: 150px;
+    background: rgb(255, 214, 42);
+}
+
+#sidebar{
+    width: 100px;
+    height: 150px;
+    background: rgb(81, 212, 0);
+}
