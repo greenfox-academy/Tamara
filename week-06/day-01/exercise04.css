@@ -1,3 +1,6 @@
+body{
+    align-items: center;
+}
 
 #layout{
     width: 960px;
@@ -20,21 +23,41 @@
 
 
 .item{
-    height: 30px;
-    width: 60px;
     min-width: 10px;
     background: rgb(42, 234, 255);
     margin: 0px 8px 0 10px;
 }
 
-#main{
+.one{
+    height: 35px;
+    width: 110px;
+}
+
+.two{
+    height: 35px;
+    width: 85px;
+}
+
+.three{
+    height: 35px;
     width: 100px;
-    height: 150px;
+}
+
+#content{
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+#main{
+    width: 70%;
+    height: 500px;
     background: rgb(255, 214, 42);
 }
 
 #sidebar{
-    width: 100px;
-    height: 150px;
+    width: 30%;
+    height: 500px;
     background: rgb(81, 212, 0);
 }
