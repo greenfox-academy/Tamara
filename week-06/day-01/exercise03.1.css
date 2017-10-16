@@ -1,0 +1,18 @@
+
+.container{
+    display: flex;
+    align-items: center;
+    height: 200px;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    background: rgb(255, 214, 42);
+}
+
+.item{
+    height: 100px;
+    min-width: 100px;
+    background: rgb(176, 42, 255);
+    margin: 0 8px 0 0;
+   
+}
