@@ -1,0 +1,37 @@
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column;
+    align-items: center;
+    height: 200px;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    justify-content: center;
+
+}
+
+.item{
+    height: 100px;
+    min-width: 200px;
+    
+}
+
+.green{
+    background: rgb(81, 212, 0);
+    order: 1;
+  }
+
+.yellow{
+    background: rgb(255, 214, 42);
+    height: 200px;
+    order: 3;
+    
+}
+
+.purple{
+    background: rgb(176, 42, 255);
+    order: 2;
+    
+}
