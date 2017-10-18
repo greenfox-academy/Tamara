@@ -1,7 +1,33 @@
 body{
+    width: 850px;
+    height: 550px;
+    margin: auto;
     background: rgb(67, 150, 233);
 }
-
 table{
     border-collapse: collapse;
+    display: table;
+    margin: auto;
+    width: 800px;
+    height: 530px;
+    color: rgb(102, 107, 132);
+    text-align: left;
+    font-size: 28px;
+}
+
+th, td{
+    display: table-cell;
+    border:2px solid gray;
+    padding: 0, 8px, 0, 0;
+}
+th{
+    background: rgb(27, 30, 36);
+}
+
+tr:nth-child(odd){
+    background: rgb(255, 255, 255);
+   
+}
+tr:nth-child(even){
+     background: rgb(235, 235, 235);
 }
