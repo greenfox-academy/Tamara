@@ -1,5 +1,5 @@
 .container{
-    display: flex;
+    display: inline-flex;
     height: 395px;
     width: 100%;
     max-width: 960px;
@@ -8,12 +8,12 @@
     justify-content: center;
     align-items: center;
     background: rgb(47, 48, 96);
-    flex-direction: column;
+    flex-direction: row;
 }
 #first{
     height: 100px;
     width: 140px;
-    justify-content: center;
+    justify-content: space-between;
     text-align: center;
    
 
@@ -22,18 +22,22 @@
 .blue{
     background: rgb(62, 91, 155);
     color: lightblue;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px 2px rgb(38, 57, 109);
   }
 
 .green{
     background: rgb(26, 170, 87);
     color: lightgreen;
-    
+    border-radius: 10px;
+    box-shadow: 0 2px 4px 2px rgb(22, 106, 64);
 }
 
 .red{
     background: rgb(208, 63, 46);
     color: palevioletred;
-    
+    border-radius: 10px;
+    box-shadow: 0 2px 4px 2px rgb(134, 43, 47);
 }
 
 .light{
