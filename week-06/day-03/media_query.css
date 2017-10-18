@@ -2,9 +2,12 @@
     margin: 0;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (max-width: 600px) {
     .container{
         flex-direction: column;
+    }
+    .item{
+        width: 100%;
     }
 }
 
