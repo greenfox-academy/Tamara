@@ -16,7 +16,30 @@
     justify-content: space-between;
     text-align: center;
    
+}
 
+.blue:hover{
+    background: rgba(62, 91, 155, 0.9);
+}
+
+.green:hover{
+    background: rgba(26, 170, 87, 0.9);
+}
+
+.red:hover{
+    background: rgb(208, 63, 46, 0.9);
+}
+
+.blue:active{
+    opacity: 0.9;
+}
+
+.green:active{
+    opacity: 0.9;
+}
+
+.red:active{
+    opacity: 0.9;
 }
 
 .blue{
