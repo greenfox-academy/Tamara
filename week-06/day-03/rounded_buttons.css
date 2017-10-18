@@ -1,0 +1,55 @@
+.container{
+    display: flex;
+    height: 395px;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    /* padding:  */
+    justify-content: center;
+    align-items: center;
+    background: rgb(47, 48, 96);
+    flex-direction: column;
+}
+#first{
+    height: 100px;
+    width: 140px;
+    justify-content: center;
+    text-align: center;
+   
+
+}
+
+.blue{
+    background: rgb(62, 91, 155);
+    color: lightblue;
+  }
+
+.green{
+    background: rgb(26, 170, 87);
+    color: lightgreen;
+    
+}
+
+.red{
+    background: rgb(208, 63, 46);
+    color: palevioletred;
+    
+}
+
+.light{
+    background: rgb(1, 170, 237);
+    color: white;
+    
+}
+
+.white{
+    background: white;
+    color: grey;
+    
+}
+
+.black{
+    background: black;
+    color: lightgrey;
+    
+}
