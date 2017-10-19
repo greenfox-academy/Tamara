@@ -1,0 +1,21 @@
+.container{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(8, minmax(150px, auto));
+    grid-auto-rows: minmax(150px, auto);
+}
+
+.purple{
+    background: rgb(176, 42, 255);
+}
+.one{
+    grid-row: 1 / 2; 
+}
+
+.yellow{
+    background: rgb(255, 214, 42);
+}
+
+.green{
+    background: rgb(81, 212, 0);
+}
