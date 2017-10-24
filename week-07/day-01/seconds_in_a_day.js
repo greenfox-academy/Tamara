@@ -7,15 +7,13 @@ let currentSeconds = 42;
 // Write a program that prints the remaining seconds (as an integer) from a
 // day if the current time is represented by these variables
 
-let day_hours = 24;
-let day_minutes = 0;
-let day_seconds = 0;
+let dayHours = 24;
+let dayMinutes = 0;
+let daySeconds = 0;
+let remainingHours = dayHours - currentHours;
+let remainingMinutes = dayMinutes - currentMinutes;
+let remainingSeconds = daySeconds - currentSeconds;
+let remaining = remainingHours * 60 * 60 + remainingMinutes * 60
+let remainingTotal = remaining + remainingSeconds
 
-let remaining_hours = day_hours - currentHours;
-let remaining_minutes = day_minutes - currentMinutes;
-let remaining_seconds = day_seconds - currentSeconds;
-
-let remaining = remaining_hours * 60 * 60 + remaining_minutes * 60
-let remaining_total = remaining + remaining_seconds
-
-console.log(remaining_total);
+console.log(remainingTotal);
