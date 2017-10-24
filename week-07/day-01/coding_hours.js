@@ -13,5 +13,5 @@ let codingHours = 17 * 5 * 6;
 console.log(codingHours);
 
 let weeklyHours = 5 * 6;
-let weeklyWorkHours = 52;
-console.log(weeklyHours / weeklyWorkHours * 100 + ' %')
+let worksInSemester = 52 * 17
+console.log(codingHours / worksInSemester * 100 + ' %')
