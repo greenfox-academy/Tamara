@@ -9,9 +9,9 @@
 // Print the percentage of the coding hours in the semester if the average
 // work hours weekly is 52
 
-let coding_hours = 17 * 5 * 6; 
-console.log(coding_hours);
+let codingHours = 17 * 5 * 6; 
+console.log(codingHours);
 
-let weekly_hours = 5 * 6;
-let weekly_work_hours = 52;
-console.log(weekly_hours / weekly_work_hours * 100 + ' %')
+let weeklyHours = 5 * 6;
+let weeklyWorkHours = 52;
+console.log(weeklyHours / weeklyWorkHours * 100 + ' %')
