@@ -7,8 +7,13 @@
 
 let al = 'Greenfox'
 
+ 
 function greet (al) {
-  console.log('Greetings, dear ' + al)
+  if (al === '') {
+    console.log('no parameters are given');
+  } else {
+      console.log('Greetings, dear ' + al);
+  }
 }
 
 greet(al)
