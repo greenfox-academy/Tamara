@@ -14,15 +14,25 @@ var students = [
 //  - how many candies they have on average
 
 
-function more_candies(student) {
-        let sum = [];
-        student.forEach(function(e) {
-            if (e.candies > 4) {
-                sum.push(e.name);
-            }
-        });
-        return sum
-      }
+function moreCandies(student) {
+  let sum = [];
+  student.forEach(function(e) {
+    if (e.candies > 4) {
+      sum.push(e.name);
+    }
+});
+  return sum
+}
+
+console.log(moreCandies(students))
       
-      console.log(more_candies(students))
-      
+function avgCandies(student) {
+  let sum = 0;
+  var avgSum = 0;
+  student.forEach(function(e) {
+    sum += e.candies;
+});
+  return avgSum = sum / 2;
+}
+
+console.log(avgCandies(students))
