@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Workshop: innerHTML, textContent</title>
+</head>
+<body>
+  <ul id='myUl'>
+    <li>placeholder</li>
+    <li>placeholder</li>
+    <li>placeholder</li>
+    <li>placeholder</li>
+  </ul>
+  <script>
+    var list = document.querySelectorAll('li');
+    var newList = ['apple', 'banana', 'cat', 'dog'];
+    list.forEach(function (element, i) {
+      element.textContent = newList[i];
+    })
+
+    document.getElementById('myUl').style.backgroundColor = "limegreen";
+  </script>
+  <!-- You can work in the html or in a separate js file. Like:
+
+  <script>
+    1) replace the list items' content with items from this list:
+    ['apple', 'banana', 'cat', 'dog']
+
+    2) change the <ul> element's background color to 'limegreen'
+      - don't just add a CSS class
+      - use the .style attribute
+  </script>
+
+  OR
+
+  <script src="content-4.js"></script> -->
+</body>
+</html>
