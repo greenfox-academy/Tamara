@@ -8,10 +8,10 @@ var order = [];
 
 
 for (let i = 0; i <= boys.length; i++) {
-  if (i <= girls.length) {
+  if (i < girls.length) {
     order.push(girls[i]);
     order.push(boys[i]);
-  } else { 
+  } else if (i === girls.length) { 
       order.push(boys[i]);
     }
 } 
