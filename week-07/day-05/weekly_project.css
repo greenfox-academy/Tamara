@@ -11,22 +11,27 @@
 
 .button {
   display: inline-grid;
+  background: url('../day-05/assets/left.svg') no-repeat center center;
 }
 
 .back.button {
   grid-column: 1 / 2;
-  background: url('../day-05/assets/left.svg') no-repeat center center;
- 
 }
 
 .to.button {
   grid-column: 3 / 4;
-  background: url('../day-05/assets/left.svg') no-repeat center center;
   transform: rotate(180deg);
 }
 
+.small.pictures {
+  display: flex;
+  width: auto;
+  height: 3em;
+  background: lightblue;
+  text-align: center;
+  text-justify: center;
+}
 /* 
-background images: url('../assets/header_logo.png') no-repeat;
 ('https://images.fineartamerica.com/images-medium-large-5/autumn-mountain-mirror-pond-original-fine-art-photography-jerry-cowart.jpg')
 ('https://www.thephotoargus.com/wp-content/uploads/2010/09/autumn-photos-16.jpg')
 ('https://icons.wxug.com/data/wximagenew/r/reddogg/41.jpg')
