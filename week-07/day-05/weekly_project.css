@@ -1,0 +1,35 @@
+.container {
+  display: grid;
+  background: lightgray;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: 2fr;
+  width: 900px;
+  height: 300px;
+  justify-content: center;
+  margin: 0, auto;
+}
+
+.button {
+  display: inline-grid;
+}
+
+.back.button {
+  grid-column: 1 / 2;
+  background: url('../day-05/assets/left.svg') no-repeat;
+  align-content: center;
+}
+
+.to.button {
+  grid-column: 3 / 4;
+  background: url('../day-05/assets/left.svg') no-repeat;
+  transform: rotate(180deg);
+  align-content: center;
+}
+
+/* 
+background images: url('../assets/header_logo.png') no-repeat;
+('https://images.fineartamerica.com/images-medium-large-5/autumn-mountain-mirror-pond-original-fine-art-photography-jerry-cowart.jpg')
+('https://www.thephotoargus.com/wp-content/uploads/2010/09/autumn-photos-16.jpg')
+('https://icons.wxug.com/data/wximagenew/r/reddogg/41.jpg')
+('http://www.lovethesepics.com/wp-content/uploads/2013/10/Autumn-in-Tennessee-Fall-Creek-Great-Smoky-Mountains.jpg')
+('https://www.walldevil.com/wallpapers/a55/autumn-mountain-tree-virginia-usa.jpg')  */
