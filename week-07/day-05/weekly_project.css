@@ -15,15 +15,14 @@
 
 .back.button {
   grid-column: 1 / 2;
-  background: url('../day-05/assets/left.svg') no-repeat;
-  align-content: center;
+  background: url('../day-05/assets/left.svg') no-repeat center center;
+ 
 }
 
 .to.button {
   grid-column: 3 / 4;
-  background: url('../day-05/assets/left.svg') no-repeat;
+  background: url('../day-05/assets/left.svg') no-repeat center center;
   transform: rotate(180deg);
-  align-content: center;
 }
 
 /* 
