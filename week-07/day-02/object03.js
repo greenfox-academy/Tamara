@@ -23,3 +23,25 @@ function nameWithBalance () {
 }
 
 nameWithBalance()
+
+function transferCash (from_account_number, to_account_number, amount) {
+  let fromAccount;
+  let toAccount;
+  for (let i = 0; i < accounts.length; i++) {
+    if (from_account_number === accounts[i].account_number) {
+      fromAccount = accounts[i];
+    } 
+    if (to_account_number === accounts[i].account_number) {
+      toAccount = accounts[i];
+    }
+  }
+  
+  if (fromAccount === undefined || toAccount === undefined) {
+      console.log("404 - account not found")
+  } 
+  toAccount.balance += amount;
+  fromAccount.balance -= amount;
+  console.log(accounts);
+}
+
+transferCash(43546731,11234543, 20)
