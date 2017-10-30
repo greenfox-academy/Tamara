@@ -1,29 +1,29 @@
-// class Sharpie {
-//   constructor(color, width) {
-//     this.color = color;
-//     this.width = width;
-//     this.inkAmount = 100;
-//   }
-//   use () {
-//     this.inkAmount -= this.width;
-//     return this.inkAmount;
-//   }
-// }
-// var Sharpie1 = new Sharpie ("blue", 10);
+class Sharpie {
+  constructor(color, width) {
+    this.color = color;
+    this.width = width;
+    this.inkAmount = 100;
+  }
+  use () {
+    this.inkAmount -= this.width;
+    return this.inkAmount;
+  }
+}
+var Sharpie1 = new Sharpie ("blue", 10);
 
-// let counter = function () {
-//   let timesCounter = 0;
-//     while (Sharpie1.inkAmount > 0) {
-//       Sharpie1.use();
-//       console.log(Sharpie1.inkAmount);
-//       timesCounter +=1;
-//     } console.log(timesCounter);
-// }
+let counter = function () {
+  let timesCounter = 0;
+    while (Sharpie1.inkAmount > 0) {
+      Sharpie1.use();
+      console.log(Sharpie1.inkAmount);
+      timesCounter +=1;
+    } console.log(timesCounter);
+}
 
-// counter()
+counter()
 
 
-function Sharpie (color, width) {
+function SharpieNew (color, width) {
   this.color = color;
   this.width = width;
   this.inkAmount = 100;
@@ -34,7 +34,7 @@ function Sharpie (color, width) {
     }
   }
 }
- var Sharpie2 = new Sharpie ("green", 5)
+ var Sharpie2 = new SharpieNew ("green", 5)
 
  while (Sharpie2.inkAmount > 0) {
   Sharpie2.use();
