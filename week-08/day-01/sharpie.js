@@ -10,13 +10,14 @@ class Sharpie {
   }
 }
 var Sharpie1 = new Sharpie ("blue", 10);
-var Sharpie2 = new Sharpie ("green", 5);
 
 let counter = function () {
+  let timesCounter = 0;
     while (Sharpie1.inkAmount > 0) {
       Sharpie1.use();
       console.log(Sharpie1.inkAmount);
-    }
+      timesCounter +=1;
+    } console.log(timesCounter);
 }
 
 
