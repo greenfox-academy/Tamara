@@ -1,7 +1,7 @@
 class Sharpie {
   constructor(color, width) {
-    this.color = "red";
-    this.width = 20;
+    this.color = color;
+    this.width = width;
     this.inkAmount = 100;
   }
   use () {
