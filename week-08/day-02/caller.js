@@ -4,12 +4,13 @@
 // it should call the callback immediately with the last even number on the array
 
 function selectLastEvenNumber (nums, printNumber) {
-  nums = [];
-  nums.forEach( function (num) {
-    if (num % 2 === 0) {
-      printNumber(num);
+  var num = 0;
+  nums.forEach(function (element) {
+    if (element % 2 === 0) {
+      num = element;
     };
   });
+  printNumber(num);
 };
 
 
