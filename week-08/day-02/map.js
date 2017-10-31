@@ -19,12 +19,10 @@ var someFruits = fruits.map (function (word) {
   for (var i = 1; i < word.length; i++) {
     if (word[i] === "e") {
       letterCounter += 1;
-      console.log(letterCounter);
     } 
   };
   return letterCounter;
 });
-
 
 
 console.log(someFruits)
