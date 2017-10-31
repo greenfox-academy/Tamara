@@ -14,16 +14,17 @@ var fruits = [
 // Please use the map method.
 
 
-var someFruits = fruits.map (function (e, newList) {
-  var containEs = [];
-  if(e.indexOf('e') !== -1) {
-      containEs.push(e);
-      newList(containEs);
+var someFruits = fruits.map (function (word) {
+  var letterCounter = 0;
+  for (var i = 1; i < word.length; i++) {
+    if (word[i] === "e") {
+      letterCounter += 1;
+      console.log(letterCounter);
+    } 
   };
+  return letterCounter;
 });
 
-function newList (containEs) {
-  console.log(containEs);
-};
 
-console.log(someFruits(containEs))
+
+console.log(someFruits)
