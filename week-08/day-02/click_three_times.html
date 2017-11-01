@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Click three times</title>
+</head>
+<body>
+  <button id="calling">Click here!</button>
+  <p id="description"></p>
+  <script>
+    var button = document.getElementById('calling');
+    var description = document.getElementById('description');
+    let clickingTimes = 0;
+    let afterLoadPage = false;
+    
+    function timer () {
+      setTimeout(function () {afterLoadPage = true;}, 5000);
+    };
+    
+    
+    function ellapsedTheSentence () {
+      if (afterLoadPage === true) {
+        clickingTimes += 1;
+      };
+      if (clickingTimes === 3) {
+        description.innerHTML = '5 seconds ellapsed and clicked 3 times';
+      };
+    };
+
+    button.addEventListener('click', ellapsedTheSentence);
+
+    timer();
+
+  </script>
+</body>
+</html>
