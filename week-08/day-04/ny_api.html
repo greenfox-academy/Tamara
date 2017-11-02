@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>NYT API</title>
+</head>
+<body>
+  <a href=""></a>
+  <script>
+    'use strict';
+
+    let body = document.querySelector('body');
+    
+    function searchArticles () {
+      let xhr = new XMLHttpRequest();
+      var url = 'https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=604e9e1d699a4a7c931d12d3de6a6e3f&begin_date=19690719&end_date=20170720';
+      xhr.open('GET', url, true);
+      xhr.onload = function() {
+        let articles = JSON.parse(xhr.responseText);
+        let mainArticles = articles.response.docs;
+        console.log(mainArticles);
+        mainArticles.forEach (function (article) {
+          EachArticles(article);
+          
+        });
+      };
+      xhr.send();
+    };
+
+    function EachArticles (article) {
+      let h1 = document.createElement('h1');
+      h1.textContent = article.headline.main;
+      body.appendChild(h1); 
+
+      let paragraph = document.createElement('p');
+      paragraph.textContent = article.snippet;
+      body.appendChild(paragraph); 
+
+      let publicationDate = document.createElement('h2');
+      publicationDate.textContent = article.pub_date;
+      body.appendChild(publicationDate);
+
+      let link = document.createElement('a');
+      body.appendChild(link);
+      link.textContent = 'more information here';
+      link.setAttribute('href', article.web_url);
+    };
+    
+
+    searchArticles()
+  </script>
+</body>
+</html>
