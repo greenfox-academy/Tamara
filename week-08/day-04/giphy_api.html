@@ -15,9 +15,9 @@
           xhr.open('GET','https://api.giphy.com/v1/gifs/search?api_key=YE2YLqgBkAD5yG9KKzHITpAVhseBWMVy&q=image&limit=' + number + '&offset=0&rating=G&lang=en');
           xhr.onload = function () {
             let items = JSON.parse(xhr.responseText).data;
-            for (let i = 0; i < number; i++) {
-              staticImages(items[i]); 
-            };
+            items.forEach(function(item) {
+              staticImages(item); 
+            });
             console.log(items);
           };
           xhr.send();
