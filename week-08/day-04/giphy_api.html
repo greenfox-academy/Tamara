@@ -15,22 +15,30 @@
           xhr.open('GET','https://api.giphy.com/v1/gifs/search?api_key=YE2YLqgBkAD5yG9KKzHITpAVhseBWMVy&q=image&limit=' + number + '&offset=0&rating=G&lang=en');
           xhr.onload = function () {
             let items = JSON.parse(xhr.responseText).data;
-            for (let i = 0; i < 16; i++) {
+            for (let i = 0; i < number; i++) {
               staticImages(items[i]); 
             };
+            console.log(items);
           };
           xhr.send();
 
         };
 
+
         function staticImages (item) {
           let img = document.createElement('img');
           img.src = item.images['fixed_height_still'].url;
           document.body.appendChild(img);
-        
+
+          img.addEventListener('click', function () {
+           img.src = item.images['downsized'].url;
+          }); 
+
         };
         
+
         searchImages(16)
+        
     </script>
 </body>
 </html>
