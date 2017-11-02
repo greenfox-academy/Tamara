@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Giphy API</title>
+</head>
+<body>
+    <button>Images</button>
+    <script>
+        'use strict';
+        function searchImages () {
+          let xhr = new XMLHttpRequest();
+          xhr.open('GET','https://api.giphy.com/v1/gifs/search?api_key=YE2YLqgBkAD5yG9KKzHITpAVhseBWMVy&q=image&limit=25&offset=0&rating=G&lang=en');
+          xhr.onload = function () {
+            let images = JSON.parse(xhr.responseText);
+          }
+          xhr.send();
+
+        }
+        searchImages()
+    </script>
+</body>
+</html>
