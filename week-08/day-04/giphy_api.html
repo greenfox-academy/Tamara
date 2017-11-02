@@ -10,16 +10,27 @@
     <button>Images</button>
     <script>
         'use strict';
-        function searchImages () {
+        function searchImages (number) {
           let xhr = new XMLHttpRequest();
-          xhr.open('GET','https://api.giphy.com/v1/gifs/search?api_key=YE2YLqgBkAD5yG9KKzHITpAVhseBWMVy&q=image&limit=25&offset=0&rating=G&lang=en');
+          xhr.open('GET','https://api.giphy.com/v1/gifs/search?api_key=YE2YLqgBkAD5yG9KKzHITpAVhseBWMVy&q=image&limit=' + number + '&offset=0&rating=G&lang=en');
           xhr.onload = function () {
-            let images = JSON.parse(xhr.responseText);
-          }
+            let items = JSON.parse(xhr.responseText).data;
+            for (let i = 0; i < 16; i++) {
+              staticImages(items[i]); 
+            };
+          };
           xhr.send();
 
-        }
-        searchImages()
+        };
+
+        function staticImages (item) {
+          let img = document.createElement('img');
+          img.src = item.images['fixed_height_still'].url;
+          document.body.appendChild(img);
+        
+        };
+        
+        searchImages(16)
     </script>
 </body>
 </html>
