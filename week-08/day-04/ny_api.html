@@ -13,6 +13,7 @@
 
     let body = document.querySelector('body');
     
+
     function searchArticles () {
       let xhr = new XMLHttpRequest();
       var url = 'https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=604e9e1d699a4a7c931d12d3de6a6e3f&begin_date=19690719&end_date=20170720';
@@ -22,12 +23,12 @@
         let mainArticles = articles.response.docs;
         console.log(mainArticles);
         mainArticles.forEach (function (article) {
-          EachArticles(article);
-          
+          EachArticles(article);      
         });
       };
       xhr.send();
     };
+
 
     function EachArticles (article) {
       let h1 = document.createElement('h1');
