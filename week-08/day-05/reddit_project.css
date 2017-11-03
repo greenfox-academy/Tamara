@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 header {
   display: flex;
   width: 100%;
@@ -13,3 +17,39 @@ header {
   font-size: 1em;
 }
 
+.posts {
+  display: flex;
+  width: 50%;
+  height: 500px;
+  padding: 0;
+  margin-right: 0;
+  background: grey;
+  float: left;
+}
+
+.addPosts {
+  display: flex;
+  float: right;
+  padding: 0;
+  margin-left: 10px;
+  width: 40%;
+  height: 500px;
+  background: grey;
+}
+
+#submit {
+  display: inline-flex;
+  background: rgba(0, 80, 255, 1);
+  width: 150px;
+  height: 50px;
+  align-content: center;
+  justify-content: center;
+  color: white;
+  font-family: 'Lato';
+  font-style: bold;
+}
+
+#new {
+  width: 80%;
+  height: 6em;
+}
