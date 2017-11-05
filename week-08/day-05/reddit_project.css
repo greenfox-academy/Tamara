@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+body { 
+  background: gray;
+}
+
 header {
   display: flex;
   width: 100%;
@@ -23,8 +27,8 @@ header {
   height: 500px;
   padding: 0;
   margin-right: 0;
-  background: grey;
   float: left;
+  flex-direction: column;
 }
 
 .addPosts {
@@ -34,22 +38,32 @@ header {
   margin-left: 10px;
   width: 40%;
   height: 500px;
-  background: grey;
+  align-items: center;
+  flex-direction: column;
 }
 
 #submit {
   display: inline-flex;
   background: rgba(0, 80, 255, 1);
-  width: 150px;
-  height: 50px;
+  width: 80%;
+  height: 3em;
   align-content: center;
   justify-content: center;
   color: white;
   font-family: 'Lato';
   font-style: bold;
+  text-transform: uppercase;
+}
+
+.topics {
+  width: 80%;
+  background: lightgrey;
+  margin-top: 0;
 }
 
 #new {
   width: 80%;
-  height: 6em;
+  height: 3em;
+  margin-top: 10px;
+  font-style: bold;
 }
