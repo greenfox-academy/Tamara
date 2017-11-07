@@ -10,3 +10,11 @@ test('sum numbers', function (t) {
   t.equal(actual, expected);
   t.end();
 });
+
+test('empty list', function (t) {
+  var actual = sum([]);
+  var expected = 0;
+
+  t.equal(actual, expected);
+  t.end();
+});
