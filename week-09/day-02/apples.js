@@ -1,5 +1,5 @@
 var apple = function getApples() {
-  return 'apple';
+  return 'pear';
 };
 
 module.exports = apple;
