@@ -5,7 +5,7 @@ var apples = require('./apples.js');
 
 test('write an apple', function (t) {
   var actual = apples('apple');
-  var expected = 'apple';
+  var expected = 'pear';
 
   t.equal(actual, expected);
   t.end();
