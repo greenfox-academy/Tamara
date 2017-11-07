@@ -18,3 +18,12 @@ test('empty list', function (t) {
   t.equal(actual, expected);
   t.end();
 });
+
+test('return with one element', function (t) {
+  var actual = sum([3]);
+  var expected = 3;
+
+  t.equal(actual, expected);
+  t.end();
+});
+
