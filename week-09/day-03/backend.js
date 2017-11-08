@@ -9,16 +9,34 @@ app.get('/', function(req, res) {
 });
 
 app.get('/doubling', function(req, res) {
-  if(req.query.input !== 0){
+  if(req.query.input){
   res.json({
     "received": req.query.input*1,
     "result": req.query.input*2
   });
-  }else{
-    res.json({
-      "error": "Please provide an input!"
+  } else {
+      res.json({
+        "error": "Please provide an input!"
     }); 
   };
+});
+
+
+app.get('/greeter', function(req, res) {
+  console.log(req.query)
+  if(req.query.name && req.query.title){
+    res.json({
+     "welcome_message": "Oh, hi there " + req.query.name + ", my dear " + req.query.title + "!"
+    });
+  } else if(req.query.name && !req.query.title) {
+    res.json({
+      "error": "Please provide a title!"
+    })
+  } else {
+    res.json({
+      "error": "Please provide a name!"
+    })
+  }
 });
 
 app.listen(8080);
