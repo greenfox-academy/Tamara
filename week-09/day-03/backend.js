@@ -60,9 +60,9 @@ app.post('/dountil/:what', function(req, res) {
       sum += num;
       num--;
     }
-    res.json({
-      "result": sum 
-    });
+  res.json({
+    "result": sum 
+  });
   } else if (req.params.what === 'factor') {
     let fact = 1;
     let num = req.body.until;
@@ -70,8 +70,8 @@ app.post('/dountil/:what', function(req, res) {
       fact *= num;
       num--;
     }  
-    res.json({
-      "result": fact 
+  res.json({
+    "result": fact 
     });
   };
 });
