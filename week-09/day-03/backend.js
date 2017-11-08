@@ -39,4 +39,19 @@ app.get('/greeter', function(req, res) {
   }
 });
 
+
+app.get('/appenda/:appendable', function(req, res) {
+  console.log(req.query)
+  // if(req.query.appendable){
+    res.json({
+      'appended': req.params.appendable + "a"
+    });
+  });
+  // } else if(!req.query.appendable) {
+  //     res.json({
+  //       "appended": 'not found'
+  //     });
+  //   };
+  // });
+
 app.listen(8080);
