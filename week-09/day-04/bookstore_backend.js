@@ -1,3 +1,5 @@
+'use strict';
+
 const express = require('express');
 const app = express();
 const mysql = require('mysql');
@@ -10,6 +12,7 @@ const con = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: 'mysql',
+  database: 'bookstore'
 });
 
 con.connect((err) => {
@@ -20,6 +23,13 @@ con.connect((err) => {
   console.log('MYSQL connection established');
 });
 
-
+app.get('/books', (request, response) => {
+  con.query('SELECT book_name FROM book_mast;', function(error, result) {
+    if (error) {
+      console.log(error.toString());
+    }
+   response.json(result);
+  });
+});
 
 app.listen(3000);
