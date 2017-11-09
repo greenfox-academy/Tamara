@@ -23,12 +23,16 @@ con.connect((err) => {
   console.log('MYSQL connection established');
 });
 
+app.get('/', function(req, res){
+  res.sendFile(__dirname + '/bookstore.html');
+});
+
 app.get('/books', (request, response) => {
-  con.query('SELECT book_name FROM book_mast;', function(error, result) {
+  con.query('SELECT book_name FROM book_mast;', function(error, rows) {
     if (error) {
       console.log(error.toString());
     }
-   response.json(result);
+   response.json(rows);
   });
 });
 
