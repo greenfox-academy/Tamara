@@ -17,13 +17,13 @@ const con = mysql.createConnection({
 
 con.connect((err) => {
   if(err){
-    console.log('Error connecting to MYSQL');
+    console.log('Error connecting to MYSQL\n');
     return;
   }
   console.log('MYSQL connection established');
 });
 
-app.get('/', function(req, res){
+app.get('/', function(req, res) {
   res.sendFile(__dirname + '/bookstore.html');
 });
 
@@ -36,4 +36,4 @@ app.get('/books', (request, response) => {
   });
 });
 
-app.listen(3000);
+app.listen(8080);

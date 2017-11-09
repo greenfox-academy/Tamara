@@ -1,26 +1,27 @@
 'use strict';
-const url = 'http://localhost:3000/';
 
-const ajax = ( method, data, resource, callback ) => {
-  const xhr = new XMLHttpRequest();
-  data = data ? data : null;
-  xhr.open( method, url + resource );
+const url = 'http://localhost:8080/';
+
+function ajax (command, callback) {
+  var xhr = new XMLHttpRequest();
+  xhr.open(command, url + 'books', true);
   xhr.setRequestHeader('Content-Type', 'application/json');
-  xhr.send( JSON.stringify(data) );
-  xhr.onreadystatechange = () => {
-    if ( xhr.readyState === 4 ) {
-      console.log(JSON.parse(xhr.response));
-      callback( JSON.parse(xhr.response) );
-    }
+  xhr.onreadystatechange = function() {
+      if(xhr.readyState == 4 && xhr.status === 200) {
+        console.log(xhr.responseText);
+          callback(JSON.parse(xhr.responseText));
+      };
   };
+  xhr.send();
 };
 
-const renderBooks = function books () {
-  books.forEach( function (book) {
-    const tempBooks = document.createElement('div');
-    tempBooks.innerText = books.book_name;
-    document.body.appendChild(tempBooks);
+let renderBook = function(item) {
+  item.forEach(function(item) {
+      let tempBook = document.createElement('p');
+      tempBook.innerText = item.book_name;
+      document.body.appendChild(tempBook);
   });
-}
+};
 
-ajax('GET', renderBooks);
+
+ajax('GET', renderBook);
