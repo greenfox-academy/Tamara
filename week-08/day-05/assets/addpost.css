@@ -26,36 +26,53 @@ h2 {
   letter-spacing: 1em;
   font-size: 0.7em;
 }
-
 .posts {
   display: flex;
+  flex-direction: column;  
+}
+
+section {
+  display: flex;
   width: 52%;
-  height: 500px;
+  height: 200px;
   background: lightgray;
   padding: 0;
   margin-right: 0;
-  margin-left: 20px;
+  margin-left: 10px;
   float: left;
   flex-direction: column;
 }
 
 #submit {
-  display: inline-flex;
+  display: flex;
   background: rgba(0, 80, 255, 1);
-  width: 40%;
+  width: 25%;
   height: 3em;
+  margin-left: 10px;  
   align-content: center;
   justify-content: center;
   color: white;
   font-family: 'Lato';
   font-style: bold;
   text-transform: uppercase;
+  
 }
 
 
-#new {
-  width: 80%;
-  height: 3em;
+a {
+  font-size: 1em;
+  color: black;
   margin-top: 10px;
   font-style: bold;
+  text-decoration: none;
+}
+
+textarea {
+  width: 90%;
+  height: 3em;
+}
+
+input {
+  width: 90%;
+  height: 3em;
 }
