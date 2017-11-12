@@ -3,7 +3,7 @@
 
 // var button = document.getElementById('submit')
 // button.addEventListener("click", addDataToPage)
-
+var container = document.querySelector('section');
 
 function doRequest(callback) {
   var x = new XMLHttpRequest();
@@ -17,14 +17,21 @@ function doRequest(callback) {
 
 function handleData(data){
   console.log(data);
-  let blah = document.createElement('a');
-  blah.href = data.title;
-  document.body.appendChild(blah);
+  data.forEach(function(element) {
+    let blah = document.createElement('div');
+    blah.innerHTML = element.title;
+    container.appendChild(blah);
 
-  let blah2 = document.createElement('a');
-  blah2.href = data.title;
-  document.body.appendChild(blah2);
-
+    let score = document.createElement('div');
+    score.innerHTML = element.score;
+    container.appendChild(score);
+    
+    let url = document.createElement('a');
+    url.setAttribute('href', element.url);
+    url.innerHTML = element.url;
+    container.appendChild(url);
+    console.log(element.url);
+  });
 }
 
 doRequest(handleData)
