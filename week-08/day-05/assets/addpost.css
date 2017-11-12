@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+}
+
+body { 
+  background: gray;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  height: 300px;
+  background: url('../assets/background.jpg'), no-repeat;
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 3em;
+  color: white;
+  font-family: 'Lato';
+  font-size: 1em;
+  flex-direction: column;
+}
+
+h2 {
+  letter-spacing: 1em;
+  font-size: 0.7em;
+}
+
+.posts {
+  display: flex;
+  width: 52%;
+  height: 500px;
+  background: lightgray;
+  padding: 0;
+  margin-right: 0;
+  margin-left: 20px;
+  float: left;
+  flex-direction: column;
+}
+
+#submit {
+  display: inline-flex;
+  background: rgba(0, 80, 255, 1);
+  width: 40%;
+  height: 3em;
+  align-content: center;
+  justify-content: center;
+  color: white;
+  font-family: 'Lato';
+  font-style: bold;
+  text-transform: uppercase;
+}
+
+
+#new {
+  width: 80%;
+  height: 3em;
+  margin-top: 10px;
+  font-style: bold;
+}
