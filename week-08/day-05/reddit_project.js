@@ -22,7 +22,7 @@ function handleData(data){
     blah.innerHTML = element.title;
     container.appendChild(blah);
 
-    let score = document.createElement('div');
+    let score = document.createElement('p');
     score.innerHTML = element.score;
     container.appendChild(score);
     

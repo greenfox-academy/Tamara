@@ -23,12 +23,22 @@ header {
 
 .posts {
   display: flex;
-  width: 58%;
+  width: 52%;
   height: 500px;
+  background: lightgray;
   padding: 0;
   margin-right: 0;
+  margin-left: 20px;
   float: left;
   flex-direction: column;
+}
+
+div {
+  margin-top: 10px;
+}
+p {
+  padding: 0;
+  margin: 0;
 }
 
 .addPosts {
