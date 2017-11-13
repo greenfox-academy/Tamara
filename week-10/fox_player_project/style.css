@@ -30,10 +30,15 @@ body {
   background: yellow;
 }
 
+.photos {
+  justify-content: space-between;
+}
+
 .logo {
   width: 100px;
   height: 100px;
   background: url('../fox_player_project/img/foxplayer.png'), no-repeat;
+  background-size: contain;
 }
 
 .photos {
