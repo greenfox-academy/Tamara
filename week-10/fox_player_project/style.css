@@ -1,13 +1,13 @@
 body {
   display: flex;
   width: 100%;
-  height: 660px;
+  height: 500px;
 }
 
 .container {
   display: flex;
   width: 100%;
-  height: 600px;
+  height: 500px;
   background: black;
   align-content: center;
   justify-content: center;
@@ -23,11 +23,12 @@ body {
 }
 .right {
   display: inline-flex;
-  width: 45%;
+  width: 50%;
   height: 100%;
   padding: 0;
   margin: 0;
   background: lightgray;
+  flex-direction: column;
 }
 
 .photos {
@@ -35,8 +36,8 @@ body {
 }
 
 .logo {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   background: url('../fox_player_project/img/foxplayer.png'), no-repeat;
   background-size: contain;
 }
@@ -46,8 +47,8 @@ body {
 }
 
 .placeholder {
-  width: 200px;
-  height: 200px;
+  width: 220px;
+  height: 220px;
   background: url('../fox_player_project/img/music-placeholder.png'), no-repeat;
   background-size: cover;
 }
@@ -59,7 +60,7 @@ h1 {
 .leftmenu {
   display: inline-flex;
   width: 100%;
-  height: 200px;
+  height: 250px;
   margin: 0;
   padding: 0;
   vertical-align: middle;
@@ -68,12 +69,36 @@ h1 {
   flex-direction: column;
 }
 
-.leftmenu li {
+li {
   height: 50px;
   width: 100%;
 }
 
-.leftmenu li:nth-child(odd) {
+li:nth-child(even) {
   background: lightgray;
 }
 
+.actualsong {
+  display: inline-flex;
+  width: 100%;
+  height: 70px;
+  font-weight: bold;
+  
+}
+
+.tracklist {
+  display: inline-flex;
+  width: 100%;
+  height: 350px;
+  margin: 0;
+  padding: 0;
+  list-style-type: decimal;
+  background: white;
+  flex-direction: column;
+  overflow: scroll;
+}
+
+/* .tracklist li {
+  height: 
+  background: lightgray;
+} */
