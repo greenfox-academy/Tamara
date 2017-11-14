@@ -61,6 +61,10 @@ h1 {
   padding-top: 0;
 }
 
+h1 i:before {
+  padding-left: 45px;
+}
+
 .leftmenu {
   display: inline-flex;
   width: 100%;
@@ -78,7 +82,7 @@ li {
   height: 50px;
   width: 100%;
   align-items: center;
-  padding-left: 15px;
+  justify-content: space-between;
 }
 
 li:nth-child(even) {
@@ -86,11 +90,18 @@ li:nth-child(even) {
 }
 
 .actualsong {
-  display: inline-flex;
+  display: flex;
   width: 100%;
   height: 100px;
   font-weight: bold;
-  
+  align-items: center;
+  justify-content: space-between;
+}
+
+.actualsong i:after {
+  width: 10px;
+  height: 10px;
+  background: url('../fox_player_project/img/star.svg') no-repeat;
 }
 
 .tracklist {
