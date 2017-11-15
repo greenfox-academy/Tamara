@@ -4,15 +4,13 @@ const Playlists = function() {
 
   const root = document.querySelector('.playlist');
   const playlistRoot = root.querySelector('ul');
-  // const fa = <i class="fa fa-times icon" aria-hidden="true"></i>;
+
   const render = function(data) {
     playlistRoot.innerHTML = "";
     data.forEach(function(element) {
       let li = document.createElement('li')
       li.textContent = element.title;
-      root.appendChild(li);  
-      // let xSign = document.createElement('i');
-      // playlist.appendChild(xSign);
+      playlistRoot.appendChild(li); 
     });
     addEvents();
   }
@@ -20,15 +18,17 @@ const Playlists = function() {
   const showCreateDialog = function(titleName) {
 
   };
+
+  let buttonToAddName = document.querySelector('button');
+  buttonToAddName.addEventListener('click', function() {
+    create()
+  });
   
-  const create = function(titleName) {
+  const create = function() {
     let addTitleName = document.querySelector('input');
-    let buttonToAddName = document.querySelector('button');
+    let newPost = {name: addTitleName.value}
     if (addTitleName.value !== '') {
-      buttonToAddName.addEventListener('click', function() {
-        let newPost = {name: addTitleName.value}
-        ajax('POST', '/playlists', newPost, render);
-      });
+      ajax('POST', '/playlists', newPost, render);
     };
   };
 
@@ -69,9 +69,8 @@ const Playlists = function() {
 
   const clickHandler = function() {}
   const load = function() {
-    ajax('GET', render);
+    ajax('GET', '/playlists', null, render);
   }
-
 
   return {
     render: render,
@@ -89,5 +88,5 @@ let playlistModule = Playlists();
 playlistModule.highlight();
 
 ajax('GET', '/playlists', null, playlistModule.render)
-playlistModule.create('Best of')
+playlistModule.create()
 playlistModule.showCreateDialog()

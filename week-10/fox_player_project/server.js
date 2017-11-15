@@ -25,7 +25,7 @@ app.get('/playlists', (req, res) => {
 
 app.post('/playlists', (req, res) => {
   let id = templatePlayList[templatePlayList.length - 1].id + 1;
-  templatePlayList.push({"id":id, "title": req.body.titleName, "system": 0});
+  templatePlayList.push({"id":id, "title": req.body.name, "system": 0});
   console.log(templatePlayList)
   res.json(templatePlayList);
 });
