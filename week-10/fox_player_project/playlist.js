@@ -1,17 +1,13 @@
 'use strict';
 
 const Playlists = function() {
-  let response = [
-    { "id": 1, "title": "Favorites", "system": 1},
-    { "id": 2, "title": "Music for programming", "system": 0},
-    { "id": 3, "title": "Driving", "system": 0},
-    { "id": 5, "title": "Fox house", "system": 0},
-  ]
-  const root = document.querySelector('.leftmenu');
-  let actionCallback;
+
+  const root = document.querySelector('.playlist');
+  const playlistRoot = root.querySelector('ul');
   // const fa = <i class="fa fa-times icon" aria-hidden="true"></i>;
-  const render = function() {
-    response.forEach(function(element) {
+  const render = function(data) {
+    playlistRoot.innerHTML = "";
+    data.forEach(function(element) {
       let li = document.createElement('li')
       li.textContent = element.title;
       root.appendChild(li);  
@@ -21,11 +17,20 @@ const Playlists = function() {
     addEvents();
   }
 
-  const showCreateDialog = function() {}
+  const showCreateDialog = function(titleName) {
 
-  const create = function() {
-    // let newElement
-  }
+  };
+  
+  const create = function(titleName) {
+    let addTitleName = document.querySelector('input');
+    let buttonToAddName = document.querySelector('button');
+    if (addTitleName.value !== '') {
+      buttonToAddName.addEventListener('click', function() {
+        let newPost = {name: addTitleName.value}
+        ajax('POST', '/playlists', newPost, render);
+      });
+    };
+  };
 
   // const deleted = function() {
   //   response.forEach(function(element) {
@@ -64,21 +69,25 @@ const Playlists = function() {
 
   const clickHandler = function() {}
   const load = function() {
-
+    ajax('GET', render);
   }
 
 
   return {
     render: render,
     highlight: highlight,
-    
+    create: create,
+    load: load,
+    showCreateDialog: showCreateDialog,
+
   }
 }
 
- 
 
 let playlistModule = Playlists();
 // playlistModule.deleted();
 playlistModule.highlight();
 
-ajax('/playlists', playlistModule.render)
+ajax('GET', '/playlists', null, playlistModule.render)
+playlistModule.create('Best of')
+playlistModule.showCreateDialog()
