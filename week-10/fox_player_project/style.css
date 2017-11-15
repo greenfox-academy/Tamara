@@ -41,7 +41,7 @@ body {
 .logo {
   width: 100px;
   height: 100px;
-  background: url('../fox_player_project/img/foxplayer.png'), no-repeat;
+  background: url('../img/foxplayer.png'), no-repeat;
   background-size: cover;
   align-items: center;
 }
@@ -49,7 +49,7 @@ body {
 .placeholder {
   width: 200px;
   height: 200px;
-  background: url('../fox_player_project/img/music-placeholder.png'), no-repeat;
+  background: url('../img/music-placeholder.png'), no-repeat;
   background-size: cover;
   opacity: 0.7;
 }
@@ -65,19 +65,41 @@ h1 i:before {
   padding-left: 45px;
 }
 
-.leftmenu {
-  display: inline-flex;
+.playlist {
+  display: flex;
   width: 100%;
-  height: 250px;
+  height: 300px;
   margin: 0;
   padding: 0;
   vertical-align: middle;
   list-style: none;
   background: white;
   flex-direction: column;
+  flex-shrink: 0;
+  overflow: scroll;
 }
 
-li {
+.playlist input {
+  width: 30%;
+  height: 3em;
+  padding: 0;
+  margin: 0;
+}
+
+.playlist button {
+  width: 20%;
+  height: 2em;
+  padding: 0;
+  margin: 0;
+  float: right;
+}
+
+.leftmenu {
+  padding: 0;
+  margin: 0;
+}
+
+.leftmenu li {
   display: flex;
   height: 50px;
   width: 100%;
@@ -101,7 +123,7 @@ li:nth-child(even) {
 .actualsong i:after {
   width: 10px;
   height: 10px;
-  background: url('../fox_player_project/img/star.svg') no-repeat;
+  background: url('../img/star.svg') no-repeat;
 }
 
 .tracklist {
@@ -137,41 +159,41 @@ li:nth-child(even) {
   position: absolute;
   align-items: center;
   justify-content: space-around;
-  bottom: 150px;
+  bottom: 100px;
   border: 1px solid darkgray;
 }
 
 .forward {
   width: 28px;
   height: 23px;
-  background: url('../fox_player_project/img/forward.svg') no-repeat center;
+  background: url('../img/forward.svg') no-repeat center;
   background-size: contain;
 }
 
 .play {
   width: 30px;
   height: 30px;
-  background: url('../fox_player_project/img/play.svg') no-repeat center;
+  background: url('../img/play.svg') no-repeat center;
   background-size: contain;
 }
 
 .rewind {
   width: 28px;
   height: 23px;
-  background: url('../fox_player_project/img/rewind.svg') no-repeat center;
+  background: url('../img/rewind.svg') no-repeat center;
   background-size: contain;
 }
 
 .shuffle {
   width: 23px;
   height: 24px;
-  background: url('../fox_player_project/img/shuffle.svg') no-repeat center;
+  background: url('../img/shuffle.svg') no-repeat center;
   background-size: contain;
 }
 
 .volume {
   width: 20px;
   height: 25px;
-  background: url('../fox_player_project/img/volume.svg') no-repeat center;
+  background: url('../img/volume.svg') no-repeat center;
   background-size: contain;
 }
