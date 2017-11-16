@@ -6,7 +6,6 @@ const Tracklists = function() {
     const tracklistRoot = root.querySelector('ul');
   
     const render = function(data) {
-      console.log(data)
       tracklistRoot.innerHTML = "";
       data.forEach(function(element) {
         let li = document.createElement('li')
@@ -53,7 +52,7 @@ const Tracklists = function() {
         if (index === i) {
           element.style.backgroundColor = 'lightblue';
         } else if (i % 2 === 0) {
-          element.style.backgroundColor = 'darkgray';
+          element.style.backgroundColor = 'white';
         } else {
           element.style.backgroundColor = 'lightgray';
         };

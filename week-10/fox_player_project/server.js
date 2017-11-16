@@ -57,9 +57,9 @@ app.get('/playlists/tracklist', (req, res) => {
   let data = []
   connection.query('SELECT * FROM Music;', function(err, result, fields) {
     result.forEach(function(element) {
-      data.push(element);
+      data.push(element.title);
     });
-    res.json(data);
+    res.send(data);
   });
 });
 
