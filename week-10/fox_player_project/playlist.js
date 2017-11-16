@@ -6,7 +6,6 @@ const Playlists = function() {
   const playlistRoot = root.querySelector('ul');
 
   const render = function(data) {
-    console.log(data)
     playlistRoot.innerHTML = "";
     data.forEach(function(element) {
       let li = document.createElement('li')
@@ -16,8 +15,9 @@ const Playlists = function() {
     addEvents();
   }
 
-  const showCreateDialog = function(titleName) {
-
+  const showCreateDialog = function(data) {
+    ajax('POST', '/playlists', data, create);
+    ajax('GET', '/playlists', null, render);
   };
 
   let buttonToAddName = document.querySelector('button');
