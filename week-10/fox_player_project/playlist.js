@@ -6,10 +6,11 @@ const Playlists = function() {
   const playlistRoot = root.querySelector('ul');
 
   const render = function(data) {
+    console.log(data)
     playlistRoot.innerHTML = "";
     data.forEach(function(element) {
       let li = document.createElement('li')
-      li.textContent = element.title;
+      li.textContent = element;
       playlistRoot.appendChild(li); 
     });
     addEvents();

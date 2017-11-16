@@ -1,15 +1,30 @@
 'use strict';
 
 let port = 8080;
-let templatePlayList = [
-  { "id": 1, "title": "Favorites", "system": 1},
-  { "id": 2, "title": "Music for programming", "system": 0},
-  { "id": 3, "title": "Driving", "system": 0},
-  { "id": 5, "title": "Fox house", "system": 0},
-]
+// let templatePlayList = [
+//   { "id": 1, "title": "Favorites", "system": 1},
+//   { "id": 2, "title": "Music for programming", "system": 0},
+//   { "id": 3, "title": "Driving", "system": 0},
+//   { "id": 5, "title": "Fox house", "system": 0},
+// ]
 
 const express = require('express');
 const app = express();
+const mysql = require('mysql');
+
+var connection = mysql.createConnection({
+  host : 'localhost',
+  user: 'root',
+  password: 'mysql',
+  database: 'musiclist'
+});
+connection.connect((err) => {
+  if(err){
+    console.log('Error connecting to MYSQL\n');
+    return;
+  };
+  console.log('MYSQL connection established');
+});
 
 app.use('/', express.static('./'));
 express.json.type = "application/json";
@@ -20,14 +35,21 @@ app.get('/', function(req, res) {
 });
 
 app.get('/playlists', (req, res) => {
-  res.json(templatePlayList);
+  let data = []
+  connection.query('SELECT * FROM Playlist;', function(err, result, fields) {
+    result.forEach(function(element) {
+      data.push(element.name);
+    });
+    res.json(data);
+  });
 });
 
 app.post('/playlists', (req, res) => {
-  let id = templatePlayList[templatePlayList.length - 1].id + 1;
-  templatePlayList.push({"id":id, "title": req.body.name, "system": 0});
-  console.log(templatePlayList)
-  res.json(templatePlayList);
+  let addPlayList = 'SELECT * FROM Playlist';
+  let playListName = "INSERT INTO Playlist (name, system);";
+  addPlayList.push({"title": req.body.name, "system": 0});
+  console.log(addPlayList)
+  res.json(addPlayList);
 });
 
 
