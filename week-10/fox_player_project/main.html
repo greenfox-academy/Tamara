@@ -26,7 +26,7 @@
     </section>
     <section class="right">
       <div class="actualsong">Song<i class="fa fa-plus" aria-hidden="true"></i></div>
-      <div class="playlist">
+      <div class="playlisttosong">
         <ul class="tracklist">
           <li>1 track</li>
           <li>2 track</li>
@@ -38,14 +38,17 @@
       </div>
     </section>
   </main>
-  <footer class="controll_panel">
-    <button class="rewind"></button>
+  <footer class="control_panel">
+<!--    <button class="rewind"></button>
     <button class="play"></button>
-    <button class="forward"></button>
-    <input type="range">
-    <button class="shuffle"></button>
-    <button class="volume"></button>  
-    <input type="range">
+    <button class="forward"></button> -->
+    <audio controls="controls" controlsList="nodownload" src="/music/graveland.mp3"
+    autoplay>
+      <input type="range">
+    <!-- <button class="shuffle"></button>
+    <button class="volume"></button> -->  
+      <input type="range">
+    </audio>
   </footer>
   <script src="ajax.js"></script>  
   <script src="playlist.js"></script>

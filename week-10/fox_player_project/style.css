@@ -149,7 +149,7 @@ li:nth-child(even) {
   flex-shrink: 0;
 }
 
-.controll_panel, main:after {
+.control_panel, main:after {
   display: inline-flex;
   width: 100%;
   height: 70px;
@@ -158,9 +158,21 @@ li:nth-child(even) {
   background: lightgrey;
   position: absolute;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   bottom: 100px;
   border: 1px solid darkgray;
+}
+
+audio {
+	filter: hue-rotate(50deg);
+}
+
+audio::-webkit-media-controls, audio::-webkit-media-controls-panel {
+	background: transparent;
+}
+
+audio::-webkit-media-controls-play-button {
+	margin: 0 2rem;
 }
 
 .forward {
