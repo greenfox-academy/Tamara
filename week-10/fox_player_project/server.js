@@ -45,13 +45,12 @@ app.get('/playlists', (req, res) => {
 });
 
 app.post('/playlists', (req, res) => {
-   let playListName = connection.query("INSERT INTO Playlist (name, system) " + object.keys(req.query) + " = " + object.values(req.query), function(err, result, fields) {
-    result.forEach(function(element) {
-      data.push(element.name);
-      res.json(data);
+   let data = [];
+   connection.query("INSERT INTO Playlist (name, system) VALUES ('"+ req.body.name +"', 0)", function(err, result, fields) {
+      data.push(req.body.name);
     });
+    res.json(req.body.name);
   });
-});
 
 app.get('/playlists/tracklist', (req, res) => {
   let data = []
