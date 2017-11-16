@@ -45,11 +45,22 @@ app.get('/playlists', (req, res) => {
 });
 
 app.post('/playlists', (req, res) => {
-  let addPlayList = 'SELECT * FROM Playlist';
-  let playListName = "INSERT INTO Playlist (name, system);";
-  addPlayList.push({"title": req.body.name, "system": 0});
-  console.log(addPlayList)
-  res.json(addPlayList);
+   let playListName = connection.query("INSERT INTO Playlist (name, system) " + object.keys(req.query) + " = " + object.values(req.query), function(err, result, fields) {
+    result.forEach(function(element) {
+      data.push(element.name);
+      res.json(data);
+    });
+  });
+});
+
+app.get('/playlists/tracklist', (req, res) => {
+  let data = []
+  connection.query('SELECT * FROM Music;', function(err, result, fields) {
+    result.forEach(function(element) {
+      data.push(element);
+    });
+    res.json(data);
+  });
 });
 
 
