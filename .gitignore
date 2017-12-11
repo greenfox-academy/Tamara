@@ -1,6 +1,8 @@
 *.pyc
 */__pycache__/
 .vscode/*
+.vscode
+gf.json
 node_modules/
 class_test.js
 callback-test.js
