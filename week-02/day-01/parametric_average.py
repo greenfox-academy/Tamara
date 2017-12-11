@@ -12,12 +12,12 @@ def sum_and_average():
     sum = 0
     average = 0
     x = 0
-    while counter < 5:
+    while counter < 100:
         x = int(input("Give me a number! "))
         sum += x
         counter += 1
         average = sum/counter    
-    print("Sum: " + str(sum) + ", Average: " + str(average))
+        print("Sum: " + str(sum) + ", Average: " + str(average))
 
 
 sum_and_average()
