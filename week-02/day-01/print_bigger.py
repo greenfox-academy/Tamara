@@ -4,8 +4,8 @@ b = int(input("Give me a number! "))
 
 def bigger_number():
     if a > b :
-        print(a)
+        return a
     elif b > a:
-        print(b)
+        return b
 
-bigger_number()
+print(bigger_number())
