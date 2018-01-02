@@ -12,4 +12,3 @@ def sum_all_legs():
 
 
 print(sum_all_legs())
-    
