@@ -4,9 +4,12 @@
 # - Print the result of `appendA(am)`
 
 am = 'kuty'
+
+
 def appendA(string):
     string = am
     string += "a"
     return string
+
 
 print(appendA(am))
