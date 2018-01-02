@@ -1,6 +1,9 @@
 
 from random import randint
+
 x = randint(1, 100)
+
+
 def check_number(life, given):
     if x < given:
         life -= 1
@@ -21,9 +24,8 @@ def random_number():
         given_number = int(input("Give me a number! "))
         life = check_number(life, given_number)
         if life == 0:
-            print("The number was: " + str(x) + "\nGame over. You lost all of your life.")
-        
+            print("The number was: " + str(x) +
+                  "Game over. You lost all of your life.")
+
 
 random_number()
-
-
