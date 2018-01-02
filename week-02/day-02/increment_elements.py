@@ -4,5 +4,5 @@
 # - Print the third element
 
 t = [1, 2, 3, 4, 5]
-t.insert(2, 7)
+t[2] += 3
 print(t[2])
