@@ -6,19 +6,15 @@
 p1 = [1, 2, 3]
 p2 = [4, 5]
 i = len(p1)
-j = len(p2) 
-k = j - i  
-#def lens (k):  
-#   while k < 1:
-#      p2.append(p1[1])
-#      return k
-#   else:
-#       print(len(k))
-#lens(k)
+j = len(p2)
+k = j - i
+
 
 def lens(k):
     if j < i:
-       print('less')
+        return 'less'
     else:
-       print('more')
-lens(k)
+        return 'more'
+
+
+print(lens(k))
