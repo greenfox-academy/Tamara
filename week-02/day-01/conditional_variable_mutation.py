@@ -32,11 +32,13 @@ is_bonus = True
 # if is_bonus is true c should remain the same
 if is_bonus == False:
     if credits >= 50:
-        c -= 2
+        c1 = int(c - 2)
+        print(c1)
     else:
-        c -= 1
-
-print(c)
+        c2 = int(c - 1)
+        print(c2)
+else:
+    print(c)
 
 
 
