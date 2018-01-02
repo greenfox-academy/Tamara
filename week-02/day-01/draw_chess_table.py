@@ -1,15 +1,16 @@
 # Crate a program that draws a chess table like this
 #
-# % % % % 
-#  % % % %
 # % % % %
 #  % % % %
 # % % % %
 #  % % % %
-# % % % % 
+# % % % %
+#  % % % %
+# % % % %
 #  % % % %
 #
 N = 8
+
 
 def chess_table():
     for i in range(N):
@@ -17,5 +18,6 @@ def chess_table():
             print(int(N/2) * "% ")
         else:
             print(int(N/2) * " %")
+
 
 chess_table()
