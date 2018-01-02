@@ -9,8 +9,8 @@
 a = 6
 b = 52
 c = 17
-d = (a* c *5)
+d = (a * c * 5)
 print("coding_time: " + str(d))
 e = c * b
 f = float(d) / e
-print("whole_working_hours: " + str(f * 100) + " %" )
+print("whole_working_hours: " + str(f * 100) + " %")
