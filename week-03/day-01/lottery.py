@@ -3,17 +3,25 @@ import csv
 
 csv_file = open('otos.csv', 'r')
 content = csv.reader(csv_file, delimiter=';')
-new_list = []
+num_list = []
 last_five_slice = slice(-5, None)
 
 def all_lottery_numbers():
     for row in content:
         for num in row[last_five_slice]:
-           new_list.append(num)
-    return new_list
+           num_list.append(num)
+    return num_list
 
-# def five_most_frequented_number():
-#     for 
-# print(five_most_frequented_number())
+def five_most_frequented_numbers():
+    all_lottery_numbers()
+    counted = {}
+    for i,v in enumerate(num_list):
+        if v in counted:
+            counted[v] += 1
+        else:
+            counted[v] = 0
+    return counted
 
-print(all_lottery_numbers())
+
+
+print(five_most_frequented_numbers())
