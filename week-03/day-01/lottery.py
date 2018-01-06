@@ -6,22 +6,24 @@ content = csv.reader(csv_file, delimiter=';')
 num_list = []
 last_five_slice = slice(-5, None)
 
+
 def all_lottery_numbers():
     for row in content:
         for num in row[last_five_slice]:
-           num_list.append(num)
+            num_list.append(num)
     return num_list
+
 
 def five_most_frequented_numbers():
     all_lottery_numbers()
     counted = {}
-    for i,v in enumerate(num_list):
-        if v in counted:
-            counted[v] += 1
+    for num in num_list:
+        if num in counted:
+            counted[num] += 1
         else:
-            counted[v] = 0
-    return counted
-
+            counted[num] = 0
+    result = [(key, counted[key]) for key in sorted(counted, key=counted.get, reverse=True)][:5]
+    return result
 
 
 print(five_most_frequented_numbers())
