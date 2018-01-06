@@ -1,5 +1,5 @@
 from tkinter import *
-
+import time
 root = Tk()
 
 canvas = Canvas(root, width='300', height='300')
@@ -10,8 +10,12 @@ canvas.pack()
 # and draws a line from that point to the center of the canvas.
 # fill the canvas with lines from the edges, every 20 px, to the center.
 
+
 def lines_to_the_center(x, y):
+    time.sleep(0.2)
+    canvas.update()
     canvas.create_line(x, y, 150, 150, fill='red')
+
 
 fix_point = [0, 300]
 for x in range(0, 301, 20):
