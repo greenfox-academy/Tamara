@@ -3,12 +3,12 @@
 # If the program is unable to write the file,
 # then it should print an error message like: "Unable to write file: my-file.txt"
 
-def write_single_line():
+def write_single_line(filename):
     try:
-        fw = open("my-file.txt", "w")
-        fw.write("Tamara")
-    except:
-        print("Unable to write file: my-file.txt")
+        fw = open(filename, 'w')
+        fw.write('Tamara')
+    except IOError:
+        return 'Unable to write file: my-file.txt'
 
 
-write_single_line()
+print(write_single_line('my-file.txt'))
