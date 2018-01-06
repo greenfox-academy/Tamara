@@ -7,8 +7,6 @@
 # to the file and each line should be "apple"
 # The function should not raise any error if it could not write the file.
 
-import os.path
-
 def write_multiple_lines(path, word, number):
     multiple_line = open(path, "w")
     try:
@@ -18,4 +16,6 @@ def write_multiple_lines(path, word, number):
         return 0
     
     multiple_line.close()
-write_multiple_lines("D:\greenfox\\first-task\Tamara\week-03\day-01\multiple_line.txt", "apple", 5)
+
+
+print(write_multiple_lines("D:\greenfox\Tamara\week-03\day-01\multiple_line.txt", "apple", 5))
