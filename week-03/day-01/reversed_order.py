@@ -4,8 +4,8 @@
 def decrypt(file_name):
     with open(file_name, "r") as f:
         text = f.read()
-        reversed = text[::-1]
-    print(reversed)
+        reversed_content = text[::-1]
+    return reversed_content
 
-    f.close()
-decrypt("reversed_order.txt")
+
+print(decrypt("reversed_order.txt"))
