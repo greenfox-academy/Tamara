@@ -3,9 +3,12 @@
 # If the program is unable to read the file (for example it does not exists),
 # then it should print an error message like: "Unable to read file: my-file.txt"
 
+def print_each_lines(filename):
+    try:
+        fr = open(filename, "r")
+        return fr.read()
+    except FileNotFoundError:
+        return "Unable to read file: my-file.txt"
 
-try:
-    fr = open("my-text.txt", "r")
-    print(my_text.readlines())
-except FileNotFoundError:
-    print("Unable to read file: my-file.txt")
+
+print(print_each_lines("my-file.txt"))
