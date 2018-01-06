@@ -4,13 +4,16 @@
 # should not raise any error.
 
 file_name = input("Give me a filename! ")
+
+
 def count_lines(file_name):
     try:
         lines = 0
-        for line in open("file_name"):
+        for line in open(file_name):
             lines += 1
         return lines
     except FileNotFoundError:
         return 0
+
 
 print(count_lines(file_name))
