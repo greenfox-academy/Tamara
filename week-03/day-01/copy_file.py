@@ -12,5 +12,8 @@ def copy_file(in_file, out_file):
             return True
     except:
         print("Something is wrong.")
-    
+    in_file.close()
+    out_file.close()
+
+
 copy_file("my-file.txt", "out_file.txt")    
