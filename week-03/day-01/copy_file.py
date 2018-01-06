@@ -10,10 +10,10 @@ def copy_file(in_file, out_file):
         for i in in_file:
             out_file.write(i)
             return True
-    except:
+    except IOError:
         print("Something is wrong.")
     in_file.close()
     out_file.close()
 
 
-copy_file("my-file.txt", "out_file.txt")    
+copy_file("my-file.txt", "out_file.txt")
