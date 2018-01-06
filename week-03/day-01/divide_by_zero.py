@@ -3,14 +3,17 @@
 # and prints the result.
 # it should print "fail" if the parameter is 0
 
-def divide():
-    divisor = int(input("Give me a number! "))
-    try:
-        result = 10 / divisor
-        print(str(result))
-    except ZeroDivisionError:
-        print("Fail")
-    except ValueError:
-        print("It must be an integer")
+divisor = input("Give me a number! ")
 
-divide()
+
+def divide():
+    try:
+        result = 10 / int(divisor)
+        return result
+    except ZeroDivisionError:
+        return "Fail"
+    except ValueError:
+        return "It must be an integer"
+
+
+print(divide())
