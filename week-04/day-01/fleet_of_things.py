@@ -8,12 +8,18 @@ fleet = Fleet()
 # 3. [x] Stand up
 # 4. [x] Eat lunch
 
+milk = Thing('Get milk')
+obstacles = Thing('Remove the obstacles')
+work = Thing('Stand up')
+eat = Thing('Eat lunch')
 
-fleet.add(Thing('Get milk'))
-fleet.add(Thing('Remove the obstacles'))
-fleet.add(Thing('Stand up'))
-fleet.add(Thing('Eat lunch'))
+work.complete()
+eat.complete()
 
-print()
+fleet.add(milk)
+fleet.add(obstacles)
+fleet.add(work)
+fleet.add(eat)
+
 
 print(fleet)
