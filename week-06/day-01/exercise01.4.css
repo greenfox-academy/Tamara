@@ -4,7 +4,7 @@
     flex-wrap: wrap;
     flex-flow: column;
     align-items: center;
-    height: 200px;
+    height: 600px;
     width: 100%;
     max-width: 960px;
     margin: 0 auto;
@@ -14,7 +14,7 @@
 
 .item{
     height: 100px;
-    min-width: 200px;
+    min-width: 300px;
     
 }
 
