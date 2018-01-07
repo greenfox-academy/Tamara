@@ -2,30 +2,32 @@
     margin: 0;
 }
 
-.container{
+.container {
     display: flex;
     align-items: center;
-    height: 200px;
+    height: 600px;
     width: 100%;
     max-width: 960px;
-    margin: 0, auto;
+    margin: auto;
     justify-content: center;
 }
 
-.item{
-    align-self: flex-end;
-    height: 100px;
-    min-width: 100px;
+.item {
+    height: 300px;
+    width: 300px;
 }
 
-.green{
+.green {
     background: rgb(81, 212, 0);
-  }
-
-.yellow{
-    background: rgb(255, 214, 42);
+    flex-grow: 1;
 }
 
-.purple{
+.yellow {
+    background: rgb(255, 214, 42);
+    flex-grow: 2;
+}
+
+.purple {
     background: rgb(176, 42, 255);
+    flex-grow: 1;
 }
