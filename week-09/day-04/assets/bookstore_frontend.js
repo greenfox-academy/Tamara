@@ -28,27 +28,27 @@ let renderBook = function(item) {
 
 
 let listDetails = function (response) {
+  var listData = "";
   response.forEach(function(element) {
-    const listData = '<tr><td>' + element.book_name +
+    listData += '<tr><td>' + element.book_name +
         '</td><td>' + element.aut_name +
         '</td><td>' + element.cate_descrip +
         '</td><td>' + element.pub_name +
         '</td><td>' + element.book_price +
         '</td></tr>';
-    tableElement.innerHTML += listData;
   });
+  tableElement.innerHTML = listData;
 };
-
-// let searchedBooks = function (results, callback) {
-//   ajax('GET', results, callback)
-// }
-searchButton.addEventListener('click', click)
 
 function click() {
   console.log("click event")
   var searchedElement = nameInput.value;
   if (searchedElement !== "") {
-      ajax('GET', url + `books/?category=${searchedElement}`, listDetails);
+    ajax('GET', url + `books/?category=${searchedElement}`, listDetails);
   }
 }
+
+searchButton.addEventListener('click', click)
+ajax('GET', url + 'books/', listDetails);
 ajax('GET', url + 'books/', renderBook);
+
