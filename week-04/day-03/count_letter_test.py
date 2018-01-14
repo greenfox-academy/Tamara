@@ -1,10 +1,11 @@
 import unittest
 from count_letter import letter_counter
 
+
 class LetterCounterTest(unittest.TestCase):
     def test_empty(self):
         self.assertEqual(letter_counter(""), {})
-        
+
     def test_one_letter(self):
         self.assertEqual(letter_counter("a"), {"a": 1})
         self.assertEqual(letter_counter("b"), {"b": 1})
