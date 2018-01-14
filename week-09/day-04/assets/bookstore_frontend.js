@@ -28,7 +28,7 @@ let renderBook = function(item) {
 
 
 let listDetails = function (response) {
-  var listData = "";
+  var listData = '';
   response.forEach(function(element) {
     listData += '<tr><td>' + element.book_name +
         '</td><td>' + element.aut_name +
@@ -41,14 +41,14 @@ let listDetails = function (response) {
 };
 
 function click() {
-  console.log("click event")
+  console.log('click event')
   var searchedElement = nameInput.value;
-  if (searchedElement !== "") {
+  if (searchedElement !== '') {
     ajax('GET', url + `books/?category=${searchedElement}`, listDetails);
   }
 }
 
+
 searchButton.addEventListener('click', click)
 ajax('GET', url + 'books/', listDetails);
 ajax('GET', url + 'books/', renderBook);
-

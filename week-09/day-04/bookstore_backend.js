@@ -4,7 +4,7 @@ const express = require('express');
 const app = express();
 const mysql = require('mysql');
 app.use('/assets', express.static('./assets'));
-express.json.type = "application/json";
+express.json.type = 'application/json';
 app.use(express.json());
 
 const con = mysql.createConnection({
@@ -15,7 +15,7 @@ const con = mysql.createConnection({
 });
 
 con.connect((err) => {
-  if(err){
+  if (err) {
     console.log('Error connecting to MYSQL\n');
     return;
   }
@@ -41,53 +41,53 @@ app.get('/books', function(req, res) {
 
   if (filters.category !== undefined) {
     if (whereAdded) {
-      searchQuery += " AND ";
+      searchQuery += ' AND ';
     } else {
-      searchQuery += " WHERE ";
+      searchQuery += ' WHERE ';
       whereAdded = true;
     }
     searchQuery += " cate_descrip='" + filters.category + "'";    
   }
 
-    if (filters.authors !== undefined) {
-      if (whereAdded) {
-        searchQuery += " AND ";
-      } else {
-        searchQuery += " WHERE ";
-        whereAdded = true;
-      }
-      searchQuery += " aut_name='" + filters.authors + "'";  
+  if (filters.authors !== undefined) {
+    if (whereAdded) {
+      searchQuery += ' AND ';
+    } else {
+      searchQuery += ' WHERE ';
+      whereAdded = true;
     }
-    
-    if (filters.publisher !== undefined) {
-      if (whereAdded) {
-        searchQuery += " AND ";
-      } else {
-        searchQuery += " WHERE ";
-        whereAdded = true;
-      }
-      searchQuery += " pub_name='" + filters.publisher + "'";  
+    searchQuery += " aut_name='" + filters.authors + "'";  
+  }
+  
+  if (filters.publisher !== undefined) {
+    if (whereAdded) {
+      searchQuery += ' AND ';
+    } else {
+      searchQuery += ' WHERE ';
+      whereAdded = true;
     }
+    searchQuery += " pub_name='" + filters.publisher + "'";  
+  }
 
-    if (filters.plt !== undefined) {
-      if (whereAdded) {
-        searchQuery += " AND ";
-      } else {
-        searchQuery += " WHERE ";
-        whereAdded = true;
-      }
-      searchQuery += " book_price<'" + filters.plt + "'";  
+  if (filters.plt !== undefined) {
+    if (whereAdded) {
+      searchQuery += ' AND ';
+    } else {
+      searchQuery += ' WHERE ';
+      whereAdded = true;
     }
+    searchQuery += " book_price<'" + filters.plt + "'";  
+  }
 
-    if (filters.pgt !== undefined) {
-      if (whereAdded) {
-        searchQuery += " AND ";
-      } else {
-        searchQuery += " WHERE ";
-        whereAdded = true;
-      }
-      searchQuery += " book_price>'" + filters.pgt + "'";  
+  if (filters.pgt !== undefined) {
+    if (whereAdded) {
+      searchQuery += ' AND ';
+    } else {
+      searchQuery += ' WHERE ';
+      whereAdded = true;
     }
+    searchQuery += " book_price>'" + filters.pgt + "'";  
+  }
 
   con.query(searchQuery, function(error, rows) {
     if (error) {
