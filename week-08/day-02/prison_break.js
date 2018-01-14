@@ -1,4 +1,3 @@
-
 // Create a prison function, that has your name as a private fugutive variable
 // The function should return an object that has two methods:
 //  - visit() // logs "[yourname] is visited [x] time(s)" to the console.
@@ -6,22 +5,23 @@
 //    - If the fugitive variable is empty, then display "Nobody is here anymore"
 //  - escape() // logs "BREAKING NEWS, [yourname] escaped the prison" to the console.
 //    - it should empties the fugitive variable
+'use strict';
 
-function prison (yourname) {
-  var fugutive = yourname;
+function prison (yourName) {
+  var fugutive = yourName;
   var x = 0;
   return {
     visit: function () {
       x += 1;
-      if (fugutive !== yourname) {
-        console.log("Nobody is here anymore");
+      if (fugutive !== yourName) {
+        console.log('Nobody is here anymore');
       } else {
-          console.log(yourname + " is visited " + x + " time(s)");
+          console.log(yourName + ' is visited ' + x + ' time(s)');
       };
     },
     escape: function () {
-      fugutive = "";
-      console.log("BREAKING NEWS," + yourname + " escaped the prison");
+      fugutive = '';
+      console.log('BREAKING NEWS,' + yourName + ' escaped the prison');
     }
   };
 };
