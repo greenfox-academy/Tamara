@@ -1,15 +1,16 @@
 'use strict';
 
 var counter = function (text) {
-  let counted_letters = [];
-  for (let i = 0; i <= text.length; i++) {
-    if (text !== -1) {
-      counted_letters[i] += 1;
-  } else {
-      counted_letters[i] = 1;
-    } return counted_letters;
-  };
-};
-
+  let word = text.split('');
+  let countedLetters = {};
+  word.forEach(element => {
+    if (countedLetters[element]) {
+      countedLetters[element] += 1;
+    } else {
+      countedLetters[element] = 1;
+    } 
+  });
+  return countedLetters;
+}
 
 module.exports = counter;
