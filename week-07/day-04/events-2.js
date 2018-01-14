@@ -9,3 +9,5 @@ let counter = function() {
 };
 
 button.addEventListener('click', counter);
+
+document.querySelector('ul').style.backgroundColor = 'green';
