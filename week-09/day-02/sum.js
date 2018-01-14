@@ -1,11 +1,16 @@
+'use strict';
+
 var numbers = [2, 3];
 
-var sum = function (numbers) {
+var sumNumbers = function (numArray) {
   let sumNums = 0;
-  for (let i=0; i<numbers.length;i++) {
-    sumNums += numbers[i];
-  }
-  return sumNums;
+  if (numArray !== null) {
+    for (let i=0; i<numArray.length;i++) {
+      sumNums += numArray[i];
+    } return sumNums;
+  } else {
+     throw new Error('Null object not found');
+    };
 };
 
-module.exports = sum;
+module.exports = sumNumbers;
