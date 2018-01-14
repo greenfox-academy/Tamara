@@ -27,5 +27,4 @@ try {
   console.log(ex.message);
 }
 
-
-addString('1234', '56789', printStr);
+addString('1234', 56789, printStr);
